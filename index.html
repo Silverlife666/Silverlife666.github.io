@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Zarządzania Systemem</title>
+    <style>
+        /* Główne style wzorowane na przesłanym zrzucie ekranu */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ebf1f5;
+            color: #333333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Górny pasek nawigacji (Navbar) */
+        header {
+            background-color: #0f3057;
+            color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-icon {
+            font-size: 20px;
+        }
+
+        header h1 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            font-size: 12px;
+            color: #a3b8cc;
+            margin-top: 2px;
+        }
+
+        .header-version {
+            font-size: 12px;
+            color: #a3b8cc;
+        }
+
+        /* Główny kontener strony */
+        main {
+            max-width: 1200px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        /* Karta główna (szare tło dla sekcji) */
+        .dashboard-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #dbe3eb;
+        }
+
+        .section-title-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-icon {
+            font-size: 18px;
+        }
+
+        .dashboard-container h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f3057;
+        }
+
+        .dashboard-subtitle {
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+
+        /* Siatka modułów (Menu) */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Pojedyncza karta modułu */
+        .module-card {
+            background-color: #ffffff;
+            border: 1px solid #dbe3eb;
+            border-radius: 6px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .module-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(15, 48, 87, 0.08);
+            border-color: #0056b3;
+        }
+
+        .module-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0f3057;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .module-desc {
+            font-size: 13px;
+            color: #555555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Przycisk akcji wewnątrz karty */
+        .module-btn {
+            background-color: #0f3057;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .module-card:hover .module-btn {
+            background-color: #0056b3; /* Efekt błękitu z aplikacji */
+        }
+
+        /* Stopka */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #778899;
+            border-top: 1px solid #dbe3eb;
+            background-color: #ffffff;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Górny Pasek nawigacyjny (identyczny styl jak w SWM) -->
+    <header>
+        <div class="header-title-container">
+            <span class="header-icon">💻</span>
+            <div>
+                <h1>Panel Główny Modułów</h1>
+                <p>Zintegrowany system zarządzania produkcją i zamówieniami</p>
+            </div>
+        </div>
+        <div class="header-version">wersja produkcyjna</div>
+    </header>
+
+    <!-- Główny Kontener Menu -->
+    <main>
+        <div class="dashboard-container">
+            <div class="section-title-container">
+                <span class="section-icon">📋</span>
+                <h2>Dostępne Moduły Systemowe</h2>
+            </div>
+            <p class="dashboard-subtitle">Wybierz odpowiedni moduł z listy poniżej, aby przejść do dedykowanego narzędzia.</p>
+            
+            <div class="modules-grid">
+                
+                <!-- 1. e-order -->
+                <a href="https://Silverlife666.github.io/e-order/" class="module-card">
+                    <div>
+                        <div class="module-name">📦 e-order</div>
+                        <p class="module-desc">Profesjonalny moduł przeznaczony do szybkiego generowania oraz przetwarzania elektronicznych potwierdzeń zamówień w systemie.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <!-- 2. Calc_SWM (Twój istniejący kalkulator) -->
+                <a href="https://Silverlife666.github.io/Calc_SWM/" class="module-card">
+                    <div>
+                        <div class="module-name">📊 Calc_SWM</div>
+                        <p class="module-desc">Zaawansowany kalkulator bobin SWM umożliwiający precyzyjne obliczanie długości nawoju papieru na podstawie średnicy zewnętrznej i aktywnej kalibracji.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <!-- 3. PPWR -->
+                <a href="https://Silverlife666.github.io/PPWR/" class="module-card">
+                    <div>
+                        <div class="module-name">⚙️ PPWR</div>
+                        <p class="module-desc">Dedykowany moduł operacyjny wspierający pełną obsługę procesów oraz wytycznych w obszarze procedur PPWR.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <!-- 4. Harmonogram -->
+                <a href="https://Silverlife666.github.io/Harmonogram/" class="module-card">
+                    <div>
+                        <div class="module-name">📅 Harmonogram</div>
+                        <p class="module-desc">System planowania zasobów ludzkich służący do sprawnego tworzenia, modyfikacji oraz weryfikacji grafików pracy dla zespołów.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <!-- 5. Zapotrzebowanie -->
+                <a href="https://Silverlife666.github.io/Zapotrzebowanie/" class="module-card">
+                    <div>
+                        <div class="module-name">📈 Zapotrzebowanie</div>
+                        <p class="module-desc">Narzędzie analityczne wyliczające zapotrzebowanie netto na bazie aktualnych stanów magazynowych i zamówień, automatycznie uwzględniające bezpieczny zapas buforowy.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 System Zarządzania Offline wersja. Wszelkie prawa zastrzeżone.
+    </footer>
+
+</body>
+</html>
