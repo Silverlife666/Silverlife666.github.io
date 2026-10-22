@@ -109,6 +109,32 @@
             gap: 20px;
         }
 
+        .beta-section-header {
+            grid-column: 1 / -1;
+            border-top: 2px solid #d4dfeb;
+            margin-top: 10px;
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #0f3057;
+        }
+
+        .beta-section-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .beta-section-header p {
+            font-size: 13px;
+            color: #66788c;
+        }
+
+        .module-card.beta-module {
+            border-color: #b8cfe4;
+            background: #fbfdff;
+        }
+
         /* Pojedyncza karta modułu */
         .module-card {
             background-color: #ffffff;
@@ -203,23 +229,7 @@
             
             <div class="modules-grid">
                 
-                <!-- 1. e-order -->
-                <a href="https://Silverlife666.github.io/e-order/" class="module-card">
-                    <div>
-                        <div class="module-name">📦 e-order</div>
-                        <p class="module-desc">Profesjonalny moduł przeznaczony do szybkiego generowania oraz przetwarzania elektronicznych potwierdzeń zamówień w systemie.</p>
-                    </div>
-                    <button class="module-btn">Uruchom moduł</button>
-                </a>
-
-                <!-- 2. Calc_SWM (Twój istniejący kalkulator) -->
-                <a href="https://Silverlife666.github.io/Calc_SWM/" class="module-card">
-                    <div>
-                        <div class="module-name">📊 Calc_SWM</div>
-                        <p class="module-desc">Zaawansowany kalkulator bobin SWM umożliwiający precyzyjne obliczanie długości nawoju papieru na podstawie średnicy zewnętrznej i aktywnej kalibracji.</p>
-                    </div>
-                    <button class="module-btn">Uruchom moduł</button>
-                </a>
+                
 
                 <!-- 3. PPWR -->
                 <a href="https://Silverlife666.github.io/PPWR/" class="module-card">
@@ -230,23 +240,7 @@
                     <button class="module-btn">Uruchom moduł</button>
                 </a>
 
-                <!-- 4. Harmonogram -->
-                <a href="https://Silverlife666.github.io/Harmonogram/" class="module-card">
-                    <div>
-                        <div class="module-name">📅 Harmonogram - grafik</div>
-                        <p class="module-desc">System planowania zasobów ludzkich służący do sprawnego tworzenia, modyfikacji oraz weryfikacji grafików pracy dla zespołów.</p>
-                    </div>
-                    <button class="module-btn">Uruchom moduł</button>
-                </a>
-
-                <!-- 5. Zapotrzebowanie -->
-                <a href="https://Silverlife666.github.io/Zapotrzebowanie/" class="module-card">
-                    <div>
-                        <div class="module-name">📈 Zapotrzebowanie</div>
-                        <p class="module-desc">Narzędzie analityczne wyliczające zapotrzebowanie netto na bazie wpisanych stanów magazynowych.<br><br>Pamiętaj uwzględnij bezpieczny zapas buforowy zamówienia.</p>
-                    </div>
-                    <button class="module-btn">Uruchom moduł</button>
-                </a>
+           
 
                 <!-- 6. Bobina -->
                 <a href="https://Silverlife666.github.io/Bobina/" class="module-card">
@@ -256,11 +250,56 @@
                     </div>
                     <button class="module-btn">Uruchom moduł</button>
                 </a>
+
+<!-- 4. Harmonogram -->
+                <a href="https://Silverlife666.github.io/Harmonogram/" class="module-card">
+                    <div>
+                        <div class="module-name">📅 Harmonogram - grafik</div>
+                        <p class="module-desc">System planowania zasobów ludzkich służący do sprawnego tworzenia, modyfikacji oraz weryfikacji grafików pracy dla zespołów.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
                  <!-- 7. Zadania i Dostawy -->
                 <a href="https://silverlife666.github.io/dostawyozadania/" class="module-card">
                     <div>
                         <div class="module-name">📅 Harmonogram - zadania i dostawy</div>
                         <p class="module-desc">System planowania zadań, dostaw, etc.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <div class="beta-section-header">
+                    <span aria-hidden="true">🧪</span>
+                    <div>
+                        <h3>Wersje beta</h3>
+                        <p>Moduły w fazie testów i dalszego rozwoju.</p>
+                    </div>
+                </div>
+
+<!-- 5. Zapotrzebowanie -->
+                <a href="https://Silverlife666.github.io/Zapotrzebowanie/" class="module-card beta-module">
+                    <div>
+                        <div class="module-name">📈 Zapotrzebowanie</div>
+                        <p class="module-desc">Narzędzie analityczne wyliczające zapotrzebowanie netto na bazie wpisanych stanów magazynowych.<br><br>Pamiętaj uwzględnij bezpieczny zapas buforowy zamówienia.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+
+<!-- 1. e-order -->
+                <a href="https://Silverlife666.github.io/e-order/" class="module-card beta-module">
+                    <div>
+                        <div class="module-name">📦 e-order</div>
+                        <p class="module-desc">Profesjonalny moduł przeznaczony do szybkiego generowania oraz przetwarzania elektronicznych potwierdzeń zamówień w systemie.</p>
+                    </div>
+                    <button class="module-btn">Uruchom moduł</button>
+                </a>
+
+                <!-- 2. Calc_SWM (Twój istniejący kalkulator) -->
+                <a href="https://Silverlife666.github.io/Calc_SWM/" class="module-card beta-module">
+                    <div>
+                        <div class="module-name">📊 Calc_SWM</div>
+                        <p class="module-desc">Zaawansowany kalkulator bobin SWM umożliwiający precyzyjne obliczanie długości nawoju papieru na podstawie średnicy zewnętrznej i aktywnej kalibracji.</p>
                     </div>
                     <button class="module-btn">Uruchom moduł</button>
                 </a>
